@@ -25,6 +25,7 @@ const breakpoints = {
     return this.v6;
   }
 };
+
 const version = semver(process.version).major;
 
 module.exports = (flags) => {

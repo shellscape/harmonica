@@ -1,0 +1,27 @@
+{
+  "env": {
+    "es6": true,
+    "mocha": true,
+    "node": true
+  },
+  "rules": {
+    "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
+    "consistent-return": [0],
+    "complexity": [0],
+    "indent": [2, 2, { "SwitchCase": 1, "VariableDeclarator": 1 }],
+    "max-len": [1, 1000],
+    "no-bitwise": [0],
+    "no-extra-parens": [0],
+    "one-var": [2, {
+      "var": "always",
+      "let": "always",
+      "const": "never"
+    }],
+    "semi": [2, "always"],
+    "space-before-function-paren": [0],
+    "space-unary-ops": [0]
+  },
+  "parserOptions": {
+    "ecmaVersion": 8
+  }
+}

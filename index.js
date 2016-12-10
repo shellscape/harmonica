@@ -3,14 +3,14 @@
 const cp = require('child_process');
 const semver = require('semver');
 
-// features we can safely look for, by version, to determine if the harmony
+// flags we can safely look for, by version, to determine if the harmony
 // flags have been applied. otherwise we're in an infinate child process loop.
 const breakpoints = {
   get v4 () {
-     return {
-       flag: 'harmony_proxies',
-       test: 'Proxy'
-     };
+    return {
+      flag: 'harmony_proxies',
+      test: 'Proxy'
+    };
   },
   get v5 () {
     return this.v4;
@@ -27,14 +27,14 @@ const breakpoints = {
 };
 const version = semver(process.version).major;
 
-module.exports = (features) => {
+module.exports = (flags) => {
 
   let breakpoint = breakpoints['v' + version] || breakpoints.v4;
 
-  features = features || ['harmony'];         // all the things by default
-  features = features.concat(breakpoint.flag);
-  features = Array.from(new Set(features));   // force uniqueness
-  features = features.map((f) => '--' + f);   // prepend --
+  flags = flags || ['harmony'];         // all the things by default
+  flags = flags.concat(breakpoint.flag);
+  flags = Array.from(new Set(flags));   // force uniqueness
+  flags = flags.map((f) => '--' + f);   // prepend --
 
   // if our breakpoint / test feature is available, then don't spawn another
   // process. we're good to go.
@@ -42,9 +42,9 @@ module.exports = (features) => {
     return;
   }
 
-  let command = process.argv[0],
+  let command = process.argv[0], // eslint-disable-line one-var
     script = process.argv.slice(1),
-    params = features.concat(script),
+    params = flags.concat(script),
     app = cp.spawn(command, params, { stdio: 'inherit' });
 
   app.on('close', (code) => {

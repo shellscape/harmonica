@@ -1,11 +1,13 @@
+'use strict';
+
 const chalk = require('chalk');
 const cp = require('child_process');
 const log = console.log;
 
-log(chalk.magenta('\nHarmonize Test'));
+log(chalk.magenta('\nHarmonica Test'));
 log(chalk.blue('  Spawning entry.js'));
 
-let app = cp.spawn('node', ['tests/entry.js'], { stdio: 'inherit' });
+let app = cp.spawn('node', ['test/entry.js'], { stdio: 'inherit' });
 
 app.on('close', function(code) {
   log();

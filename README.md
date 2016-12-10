@@ -62,3 +62,5 @@ complete rewrite of harmonize, but follows the same principles.
 
 [@stuk](https://twitter.com/stuk) was kind enough to allow me to use the
 'harmonica' module name in the NPM registry.
+
+Harmonica vector base by [saicreative](https://www.vecteezy.com/members/saicreative).

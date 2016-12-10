@@ -1,7 +1,5 @@
 'use strict';
 
-console.log(Proxy)
-
 // node 4.6.2, 5
 // https://developer.mozilla.org/en-US/docs/Archive/Web/Old_Proxy_API#Examples
 if (Proxy.create) {
@@ -25,6 +23,6 @@ else {
     },
     p = new Proxy({}, handler);
 
-    p.a = 1;
-    p.b = undefined;
+  p.a = 1;
+  p.b = undefined;
 }

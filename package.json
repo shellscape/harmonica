@@ -2,7 +2,7 @@
   "name": "harmonica",
   "description": "A module that allows use of Node.js --harmony flags, programmatically.",
   "author": "Andrew Powell <andrew@shellscape.org>",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "repository": {
     "type": "git",

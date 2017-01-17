@@ -4,6 +4,12 @@
 
 ![Harmonica](harmonica.png)
 
+Harmonica allows developers to use `--harmony` flags programmatically. That means
+an end to specifying command-line options for experimental "harmony" features of
+Node.js/V8. If you've ever wanted to use experimental features within Gulp tasks,
+or have a need to run an app through wrappers like `forever`, this module takes
+the command-line headache out of the equation.
+
 ![screenshot](screenshot.png)
 
 ## Node Version Requirements

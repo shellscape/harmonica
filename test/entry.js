@@ -5,7 +5,7 @@ const semver = require('semver');
 const version = semver(process.version).major;
 
 let script = './async-await.js',
-  flags = ['harmony-async-await'];
+  flags = ['harmony_for_in', 'harmony-async-await', 'harmony_simd'];
 
 if (version < 6) {
   script = './proxy.js';

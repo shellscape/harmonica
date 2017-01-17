@@ -24,9 +24,8 @@ require('harmonica')();
 
 ## Specifying Flags
 
-Should you need only specific flags, harmonica accepts a lone parameter. Create
-an `Array` of strings representing the flags you want to enable, without the leading
-hyphens.
+Should you need only specific flags, pass an `Array` of strings representing the
+flags you want to enable, without the leading hyphens, as the first parameter.
 
 ```js
 require('harmonica')([
@@ -54,6 +53,49 @@ you may do so by executing the following in a terminal:
 node --v8-options | grep "in progress"
 ```
 
+## API
+
+### default([flags], [options])
+
+#### flags
+
+*Optional*  
+Type: `Array`  
+Default: `undefined`
+
+See [Specifying Flags](#specifying-flags)
+
+#### options
+
+*Optional*  
+Type: `Object`  
+Default: `{ silent: false }`
+
+Example Usage of all options:
+
+```js
+require('harmonica')({ silent: true });
+```
+
+Or, if you need to specify flags:
+
+```js
+require('harmonica')([
+    'harmony-array-values',
+    'harmony-async-await'
+  ],
+  { silent: true });
+```
+
+##### silent
+
+Type: `Boolean`  
+Default: `false`
+
+Should you wish to silence harmonica's output, set a `silent` property on
+`options` to `false`.
+
+
 ## Attribution
 
 [dcodeIO](http://dcode.io/) wrote and published the wonderful
@@ -64,3 +106,7 @@ complete rewrite of harmonize, but follows the same principles.
 'harmonica' module name in the NPM registry.
 
 Harmonica vector base by [saicreative](https://www.vecteezy.com/members/saicreative).
+
+## License
+
+MIT © [Andrew Powell](http://shellscape.org)

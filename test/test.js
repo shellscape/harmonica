@@ -9,7 +9,7 @@ log(chalk.blue('  Spawning entry.js'));
 
 let app = cp.spawn('node', ['test/entry.js'], { stdio: 'inherit' });
 
-app.on('close', function(code) {
+app.on('close', (code) => {
   log();
 
   if (code) {

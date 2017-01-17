@@ -4,7 +4,7 @@
 // https://developer.mozilla.org/en-US/docs/Archive/Web/Old_Proxy_API#Examples
 if (Proxy.create) {
   let handler = {
-      get: function(target, name){
+      get: function (target, name){
         return 1;
       }
     },
@@ -15,10 +15,8 @@ if (Proxy.create) {
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
 else {
   let handler = {
-      get: function(target, name){
-        return name in target?
-        target[name] :
-        37;
+      get: function (target, name){
+        return name in target ? target[name] : 37;
       }
     },
     p = new Proxy({}, handler);

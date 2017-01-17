@@ -5,21 +5,26 @@
     "node": true
   },
   "rules": {
-    "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
-    "consistent-return": [0],
-    "complexity": [0],
-    "indent": [2, 2, { "SwitchCase": 1, "VariableDeclarator": 1 }],
-    "max-len": [1, 1000],
-    "no-bitwise": [0],
-    "no-extra-parens": [0],
-    "one-var": [2, {
+    "brace-style": ["error", "stroustrup", { "allowSingleLine": false }],
+    "consistent-return": ["off"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "complexity": ["off"],
+    "indent": ["error", 2, { "SwitchCase": 1, "VariableDeclarator": 1 }],
+    "keyword-spacing": ["error", { "after": true }],
+    "max-len": ["warn", 1000],
+    "no-bitwise": ["off"],
+    "no-console": ["off"],
+    "no-extra-parens": ["off"],
+    "one-var": ["error", {
       "var": "always",
       "let": "always",
       "const": "never"
     }],
-    "semi": [2, "always"],
-    "space-before-function-paren": [0],
-    "space-unary-ops": [0]
+    "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
+    "semi": ["error", "always"],
+    "space-before-function-paren": ["error", "always"],
+    "space-infix-ops": ["error", { "int32Hint": false }],
+    "space-unary-ops": ["off"]
   },
   "parserOptions": {
     "ecmaVersion": 8

@@ -19,7 +19,7 @@ module.exports = (flags, options) => {
       options = flags;
       flags = null;
     }
-    else {
+    else if (flags) {
       throw new Error(`harmonica's first parameter must be either an Array containing flags or options Object`);
     }
   }

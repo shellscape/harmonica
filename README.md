@@ -4,6 +4,8 @@
 
 ![Harmonica](harmonica.png)
 
+![screenshot](screenshot.png)
+
 ## Node Version Requirements
 
 Harmonica should work with Node.js version 4.6.2 and higher. However, specifying

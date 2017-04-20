@@ -7,6 +7,7 @@ A module that allows use of Node.js --harmony flags, programmatically.
   <b>:rocket: &nbsp; Are you ready to tackle ES6 and hone your JavaScript Skills?</b> &nbsp; :rocket:<br/>
   Check out these outstanding <a href="https://es6.io/friend/POWELL">ES6 courses</a> by <a href="https://github.com/wesbos">@wesbos</a>
 </p>
+
 ---
 
 ![Harmonica](harmonica.png)
@@ -56,7 +57,7 @@ Should you require flags meant to extend the syntax, you must create an entry
 point in a separate file from which to initialize harmonica. You can then
 `require` the main script for your app, which contains the body of code.
 
-Please see [the tests for an example](https://github.com/shellscape/harmonica/test)
+Please see [the tests for an example](test)
 which uses the `async` / `await` syntax.
 
 ## Listing Available Flags
